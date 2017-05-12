@@ -11,7 +11,7 @@
         android:layout_height="495dp"
         tools:layout_editor_absoluteY="8dp"
         tools:layout_editor_absoluteX="8dp"
-        android:gravity="left"
+        android:gravity="right"
         >
         <TextView
             android:layout_width="wrap_content"
