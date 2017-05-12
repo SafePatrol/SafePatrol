@@ -5,4 +5,5 @@ package com.hanict.safepatrol;
  */
 
 public class Test {
+    String aa;
 }
