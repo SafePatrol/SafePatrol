@@ -12,8 +12,10 @@
         android:layout_width="395dp"
         android:layout_height="587dp"
         android:gravity="left"
+        android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_editor_absoluteY="8dp"
+        android:weightSum="1">
         <!-- 첫번째 줄 LinearLayout 처리 -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,14 +25,36 @@
             <ImageButton
                 android:layout_width="100px"
                 android:layout_height="100px"
-                android:gravity="right"
-                android:background="@drawable/location" />
+                android:background="@drawable/location"
+                android:gravity="right" />
 
             <ImageButton
                 android:layout_width="100px"
                 android:layout_height="100px"
                 android:layout_marginLeft="320dp"
                 android:background="@drawable/setting" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="371dp"
+            android:layout_height="100px"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="입력" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="검색" />
         </LinearLayout>
     </LinearLayout>
 
