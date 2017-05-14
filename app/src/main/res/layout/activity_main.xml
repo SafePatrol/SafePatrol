@@ -1,61 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.hanict.safepatrol.MainActivity">
+    android:layout_height="match_parent">
 
-    <!-- 전체화면 LinearLayout 처리 -->
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="587dp"
-        android:gravity="left"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"
-        android:weightSum="1">
-        <!-- 첫번째 줄 LinearLayout 처리 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#4a6cdd">
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
 
-            <ImageButton
-                android:layout_width="100px"
-                android:layout_height="100px"
-                android:background="@drawable/location"
-                android:gravity="right" />
-
-            <ImageButton
-                android:layout_width="100px"
-                android:layout_height="100px"
-                android:layout_marginLeft="320dp"
-                android:background="@drawable/setting" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="371dp"
-            android:layout_height="100px"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="입력창" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="검색" />
-        </LinearLayout>
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10">
+
+    </LinearLayout>
+
+</LinearLayout>
