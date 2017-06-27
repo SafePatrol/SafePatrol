@@ -14,7 +14,7 @@ import static java.sql.DriverManager.println;
 
 public class DatabaseAdapter extends SQLiteOpenHelper {
     private static final String TAG = "DatabseAdapter";
-    private static final String DATABASE_NAME="";
+    private static final String DATABASE_NAME="safepatrol.db";
     private static final int DATABASE_VERSION=0;
     private static final String TABLE_NAME="";
 
@@ -36,6 +36,7 @@ public class DatabaseAdapter extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME );
+        onCreate(db);
     }
 }
