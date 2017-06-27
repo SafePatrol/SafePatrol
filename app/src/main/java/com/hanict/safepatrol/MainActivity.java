@@ -24,7 +24,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends Activity implements OnMapReadyCallback { //NoTitleBar 테마를 사용할경우 APPCOMPATACTIVITY와 충돌, 그냥 ACTIVITY 상속
+    private static final String TAG = "MainActivity";
 
     GoogleMap mMap;
     View view;
