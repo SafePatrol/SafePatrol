@@ -3,6 +3,7 @@ package com.hanict.safepatrol;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,10 +39,22 @@ public class MainActivity extends Activity implements OnMapReadyCallback { //NoT
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /* 2017년 SeonWooHan 2017년 07월 03일 부분 수정 - 버튼 이벤트 넣기(오류발생)
+        Button GoSetting = (Button)findViewById(R.id.go_setting_button);
+        GoSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+        2017년 SeonWooHan 수정 종료 지점(오류발생) */
+
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment) fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
     //지도 초기값.
