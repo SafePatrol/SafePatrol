@@ -39,7 +39,7 @@ public class MainActivity extends Activity implements OnMapReadyCallback { //NoT
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        /* 2017년 SeonWooHan 2017년 07월 03일 부분 수정 - 버튼 이벤트 넣기(오류발생)
+        // 2017년 SeonWooHan 2017년 07월 03일 부분 수정 - 버튼 이벤트 넣기
         Button GoSetting = (Button)findViewById(R.id.go_setting_button);
         GoSetting.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +48,7 @@ public class MainActivity extends Activity implements OnMapReadyCallback { //NoT
                 startActivity(intent);
             }
         });
-        2017년 SeonWooHan 수정 종료 지점(오류발생) */
+        //2017년 SeonWooHan 수정 종료 지점
 
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment) fragmentManager
