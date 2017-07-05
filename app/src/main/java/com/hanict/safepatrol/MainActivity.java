@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -61,11 +62,22 @@ public class MainActivity extends Activity implements OnMapReadyCallback { //NoT
         setContentView(R.layout.activity_main);
 
         permissionCheck();
+        // 2017년 SeonWooHan 2017년 07월 03일 부분 수정 - 버튼 이벤트 넣기
+        Button GoSetting = (Button)findViewById(R.id.go_setting_button);
+        GoSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+        //2017년 SeonWooHan 수정 종료 지점
 
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment) fragmentManager
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
     private  void permissionCheck(){
 

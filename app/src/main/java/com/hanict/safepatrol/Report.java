@@ -4,14 +4,14 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * Created by Shin on 2017-06-23.
+ * Created by suh15 on 2017-07-03.
  */
 
-public class SettingActivity extends Activity{
+public class Report extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_report);
     }
 
 }
