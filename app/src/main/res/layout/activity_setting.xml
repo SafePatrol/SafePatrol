@@ -51,33 +51,45 @@
             android:gravity="center"
             android:orientation="horizontal">
             <!-- 버튼 속성은 나중에 이미지 넣어서 이미지 버튼 속성으로 변경 -->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="200px"
+                android:layout_height="200px"
                 android:id="@+id/report"
-                android:text="사고다발구역 신고"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/setting1"/>
+            <!--이 TextView는 띄워주는 역할 -->
+            <TextView
+                android:layout_width="80px"
+                android:layout_height="80px" />
+            <ImageButton
+                android:layout_width="200px"
+                android:layout_height="200px"
                 android:id="@+id/commuting"
-                android:text="출퇴근시간 설정"/>
+                android:background="@drawable/setting2"/>
         </LinearLayout>
+        <!--이 TextView는 띄워주는 역할 -->
+        <TextView
+            android:layout_width="80px"
+            android:layout_height="80px" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal">
             <!-- 버튼 속성은 나중에 이미지 넣어서 이미지 버튼 속성으로 변경 -->
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="200px"
+                android:layout_height="200px"
                 android:id="@+id/alarm"
-                android:text="알람음 설정"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:background="@drawable/setting3"/>
+            <!--이 TextView는 띄워주는 역할 -->
+            <TextView
+                android:layout_width="80px"
+                android:layout_height="80px" />
+            <ImageButton
+                android:layout_width="200px"
+                android:layout_height="200px"
                 android:id="@+id/Information"
-                android:text="프로그램 정보"/>
+                android:background="@drawable/setting4"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
