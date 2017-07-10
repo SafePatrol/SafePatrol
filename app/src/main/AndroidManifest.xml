@@ -22,9 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"/>
+        <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
+        <activity android:name=".SettingActivity"/>
     </application>
 
 </manifest>
