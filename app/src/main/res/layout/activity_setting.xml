@@ -54,7 +54,7 @@
             <ImageButton
                 android:layout_width="300px"
                 android:layout_height="300px"
-                android:id="@+id/report"
+                android:id="@+id/report_button"
                 android:background="@drawable/setting1"/>
             <!--이 TextView는 띄워주는 역할 -->
             <TextView

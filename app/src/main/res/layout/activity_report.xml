@@ -6,37 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.hanict.safepatrol.Report">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
 
-        android:layout_weight="1">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:layout_marginLeft="10dp"
-            android:textSize="13pt"
-            android:text="지도" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="5"
-            android:gravity="center"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="설정"
-            android:layout_weight="2"
-            android:textSize="13pt"
-            android:layout_marginRight="10dp"
-            />
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,12 +22,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="←"
-                android:textSize="15pt"/>
+                android:textSize="20pt"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="출퇴근시간설정"
-                android:textSize="15pt"/>
+                android:text="사고다발구역신고"
+                android:textSize="20pt"/>
         </LinearLayout>
         <!-- 사고유형 레이아웃 -->
         <LinearLayout

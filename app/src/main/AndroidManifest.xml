@@ -25,6 +25,7 @@
         <activity android:name=".MainActivity"/>
         <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
         <activity android:name=".SettingActivity"/>
+        <activity android:name=".Report"/>
     </application>
 
 </manifest>
