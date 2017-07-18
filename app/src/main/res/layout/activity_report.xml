@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <ImageButton
+                android:id="@+id/report_reverse_button"
                 android:layout_marginLeft="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -36,16 +37,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="○"
-                android:textSize="15pt"/>
+                android:textSize="15pt" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="사고유형"
-                android:textSize="15pt"/>
+                android:textSize="15pt" />
+            <Spinner
+                android:id="@+id/report_spinner"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_height="20pt" />
             <!-- 스크롤 이벤트 레이아웃 추가 -->
         </LinearLayout>
         <!-- 발생시간 레이아웃 -->
@@ -63,6 +70,37 @@
                 android:layout_height="wrap_content"
                 android:text="발생시간"
                 android:textSize="15pt"/>
+            <Button
+                android:id="@+id/report_Date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="날짜 설정 ▽"
+                android:textSize="8pt"/>
+            <Button
+                android:id="@+id/report_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="시간 설정 ▽"
+                android:textSize="8pt"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 날짜 설정 위젯 숨겨 있음 -->
+            <DatePicker
+                android:id="@+id/report_datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <!-- 시간 설정 위젯 숨겨 있음 -->
+            <TimePicker
+                android:id="@+id/report_timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
             <!-- 스크롤 이벤트 레이아웃 추가 -->
         </LinearLayout>
         <!-- 발생지역 레이아웃 -->
@@ -80,17 +118,13 @@
                 android:layout_height="wrap_content"
                 android:text="발생지역"
                 android:textSize="15pt"/>
-            <!-- 스크롤 이벤트 레이아웃 추가 -->
-        </LinearLayout>
-        <!-- 발생지역 입력 레이아웃 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="match_parent"
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14pt"/>
+                android:layout_marginLeft="20dp"
+                android:text="지도에서 찾기"
+                android:textSize="8pt"/>
+            <!-- 스크롤 이벤트 레이아웃 추가 -->
         </LinearLayout>
         <!-- 발생사진 레이아웃 -->
         <LinearLayout
@@ -102,18 +136,17 @@
                 android:layout_height="wrap_content"
                 android:text="○"
                 android:textSize="15pt" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="발생사진"
                 android:textSize="15pt" />
-
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="업로드"
-                android:textSize="15pt" />
+                android:layout_marginLeft="20dp"
+                android:text="사진 선택"
+                android:textSize="8pt"/>
         </LinearLayout>
         <!-- 발생사진 보기 레이아웃 -->
         <LinearLayout

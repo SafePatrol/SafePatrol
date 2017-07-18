@@ -23,6 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"/>
+        <!-- SeonWooHan 백그라운드 관련 service 설정 -->
+        <service android:name=".BackGroundService"/>
         <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
         <activity android:name=".SettingActivity"/>
         <activity android:name=".Report"/>

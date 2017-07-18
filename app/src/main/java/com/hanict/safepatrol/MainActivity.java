@@ -73,6 +73,12 @@ public class MainActivity extends Activity implements OnMapReadyCallback { //NoT
         });
         //2017년 SeonWooHan 수정 종료 지점
 
+        /*
+            2017년 SeonWooHan 2017년 07월 18일 부분 수정 - 백그라운드 소스 관련 코드 (아직 사용안함)
+            startService(new Intent(MainActivity.this, BackGroundService.class)); // 백그라운드 서비스 시작
+            stopService(new Intent(MainActivity.this, BackGroundService.class)); // 백그라운드 서비스 종료
+         */
+
         FragmentManager fragmentManager = getFragmentManager();
         MapFragment mapFragment = (MapFragment) fragmentManager
                 .findFragmentById(R.id.map);
