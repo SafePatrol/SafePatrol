@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="사고 다발 구역 신고"
+                android:text="사고 구역 신고"
                 android:textSize="15pt" />
         </LinearLayout>
         <!-- 사고유형 레이아웃 -->
