@@ -11,7 +11,8 @@ import android.support.annotation.Nullable;
  * 추가할 항목
  * 1. 사용자 위치와 사고다발구역 위치가 같으면 사용자가 설정한 사운드를 내도록 설정 (안드로이드 내부 DB사용)
  * 2. 사용자의 설정한 시간 외에 사운드가 울리지 않도록 설정 (안드로이드 내부 DB사용)
- * 3. 백그라운드 관련 사이트 http://blog.naver.com/PostView.nhn?blogId=wind5395&logNo=150081290293
+ * 3. 현재시간 가져오기 관련 사이트 http://liveonthekeyboard.tistory.com/129
+ * 4. 백그라운드 관련 사이트 http://blog.naver.com/PostView.nhn?blogId=wind5395&logNo=150081290293
  */
 
 public class BackGroundService extends Service{

@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.SimpleAdapter;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -139,14 +140,12 @@ public class commuting extends Activity {
         TimePicker CommutingTimePickerEnd2 = (TimePicker)findViewById(R.id.commuting_end_2);
         TimePicker CommutingTimePickerStart2 = (TimePicker)findViewById(R.id.commuting_start_2);
 
-
         try{ // 데이터 베이스 정의하는 작업
                 m_ins = insideDataBase.GetInstance(this);
         }catch(Exception e){
             e.printStackTrace();
         }
         InsideDataBase = m_ins.TimeSelect();
-        Iterator<String> iter =  InsideDataBase.keySet().iterator();
         dbStartHour1 = InsideDataBase.get("start_time_hour_1");
         dbStartMinute1 = InsideDataBase.get("start_time_Minute_1");
         dbendHour1 = InsideDataBase.get("end_time_hour_1");
@@ -160,10 +159,45 @@ public class commuting extends Activity {
         CommutingTimePickerStart1.setMinute(dbStartMinute1);
         CommutingTimePickerEnd1.setHour(dbendHour1);
         CommutingTimePickerEnd1.setMinute(dbendMinute1);
-        CommutingTimePickerEnd2.setHour(dbStartHour2);
-        CommutingTimePickerEnd2.setMinute(dbStartMinute2);
-        CommutingTimePickerStart2.setHour(dbendHour2);
-        CommutingTimePickerStart2.setMinute(dbendMinute2);
+        CommutingTimePickerStart2.setHour(dbStartHour2);
+        CommutingTimePickerStart2.setMinute(dbStartMinute2);
+        CommutingTimePickerEnd2.setHour(dbendHour2);
+        CommutingTimePickerEnd2.setMinute(dbendMinute2);
+
+        // 저장버튼 이벤트 설정
+        Button CommutingReturnButton = (Button)findViewById(R.id.commuting_Return_button);
+        CommutingReturnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 데이터 베이스 작업전 타임피커 모두 선언하기
+                TimePicker CommutingTimePickerStart1 = (TimePicker) findViewById(R.id.commuting_start_1);
+                TimePicker CommutingTimePickerEnd1 = (TimePicker) findViewById(R.id.commuting_end_1);
+                TimePicker CommutingTimePickerStart2 = (TimePicker) findViewById(R.id.commuting_start_2);
+                TimePicker CommutingTimePickerEnd2 = (TimePicker) findViewById(R.id.commuting_end_2);
+
+
+                // TimePick 값을 int형 변수에 저장
+                dbStartHour1 = CommutingTimePickerStart1.getHour();
+                dbStartMinute1 = CommutingTimePickerStart1.getMinute();
+                dbendHour1 = CommutingTimePickerEnd1.getHour();
+                dbendMinute1 = CommutingTimePickerEnd1.getMinute();
+                dbStartHour2 = CommutingTimePickerStart2.getHour();
+                dbStartMinute2 = CommutingTimePickerStart2.getMinute();
+                dbendHour2 = CommutingTimePickerEnd2.getHour();
+                dbendMinute2 = CommutingTimePickerEnd2.getMinute();
+
+                try { // 데이터 베이스 저장하는 작업
+                    m_ins = insideDataBase.GetInstance(commuting.this);
+                    m_ins.TimeAppend(dbStartHour1,dbStartMinute1
+                            ,dbendHour1,dbendMinute1,dbStartHour2,dbStartMinute2,dbendHour2,
+                            dbendMinute2);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(commuting.this, "저장되었습니다.", Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
 
         // 뒤로 가는 이미지 버튼 클릭시 해당 레이아웃을 종료
         ImageButton ReverseButton = (ImageButton)findViewById(R.id.commuting_reverse_button);

@@ -41,7 +41,14 @@ public class insideDataBase {
 	}
 
 	public void TimeAppend(int start_time_hour_1, int start_time_Minute_1, int end_time_hour_1, int end_time_Minute_1, int start_time_hour_2, int start_time_Minute_2, int end_time_hour_2, int end_time_Minute_2) throws Exception{ // 출퇴근 관련 데이터 베이스에 데이터를 저장하는 함수
-		db.execSQL("update into TIME values(" + start_time_hour_1 + "," + start_time_Minute_1 + "," + end_time_hour_1 + ","+ end_time_Minute_1 + ","+ start_time_hour_2 + ","+ start_time_Minute_2 + ","+ end_time_hour_2 + ","+ end_time_Minute_2 + ") ");
+		db.execSQL("Update TIME SET start_time_hour_1 = " + start_time_hour_1);
+		db.execSQL("Update TIME SET start_time_Minute_1 = " + start_time_Minute_1);
+		db.execSQL("Update TIME SET end_time_hour_1 = " + end_time_hour_1);
+		db.execSQL("Update TIME SET end_time_Minute_1 = " + end_time_Minute_1);
+		db.execSQL("Update TIME SET start_time_hour_2 = " + start_time_hour_2 );
+		db.execSQL("Update TIME SET start_time_Minute_2 = " + start_time_Minute_2);
+		db.execSQL("Update TIME SET end_time_hour_2 = " + end_time_hour_2);
+		db.execSQL("Update TIME SET end_time_Minute_2 = " + end_time_Minute_2);
 	}
 
 	public void dropTable() {
