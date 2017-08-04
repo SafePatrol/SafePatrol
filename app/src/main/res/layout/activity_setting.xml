@@ -67,7 +67,7 @@
             <ImageButton
                 android:layout_width="300px"
                 android:layout_height="300px"
-                android:id="@+id/alarm"
+                android:id="@+id/alarm_button"
                 android:background="@drawable/setting3"/>
             <!--이 TextView는 띄워주는 역할 -->
             <TextView

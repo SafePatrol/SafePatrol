@@ -29,7 +29,8 @@
         <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
         <activity android:name=".SettingActivity" />
         <activity android:name=".Report" />
-        <activity android:name=".commuting"/>
+        <activity android:name=".commuting" />
+        <activity android:name=".alarm"/>
     </application>
 
 </manifest>

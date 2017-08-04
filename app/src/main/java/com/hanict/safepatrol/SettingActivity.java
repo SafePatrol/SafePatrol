@@ -34,6 +34,15 @@ public class SettingActivity extends Activity{
                 startActivity(intent);
             }
         });
+        // 알림음 설정 버튼 클릭시 해당 레이아웃으로 이동 코드
+        ImageButton Alarm = (ImageButton)findViewById(R.id.alarm_button);
+        Alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingActivity.this, alarm.class);
+                startActivity(intent);
+            }
+        });
         // 뒤로 가는 이미지 버튼 클릭시 해당 레이아웃을 종료
         ImageButton ReverseButton = (ImageButton)findViewById(R.id.reverse_button);
         ReverseButton.setOnClickListener(new View.OnClickListener() {

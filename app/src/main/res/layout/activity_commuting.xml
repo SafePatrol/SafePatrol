@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="출퇴근 시간 설정"
+            android:layout_gravity="center"
             android:textSize="20pt" />
     </LinearLayout>
     <!-- 배경화면 세로 기준 중앙 정렬 -->
