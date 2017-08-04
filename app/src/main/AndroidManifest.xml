@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hanict.safepatrol">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,6 +15,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAB_uEA1gY5jRifhh6nCmL3NYayZ0RhoKw" />
+
         <activity android:name=".PermmisionCheckActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,12 +23,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <!-- SeonWooHan 백그라운드 관련 service 설정 -->
-        <service android:name=".BackGroundService"/>
+        <service android:name=".BackGroundService" />
         <!-- SeonWooHan 버튼 이벤트용 Activity 설정 -->
-        <activity android:name=".SettingActivity"/>
-        <activity android:name=".Report"/>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".Report" />
+        <activity android:name=".commuting"/>
     </application>
 
 </manifest>
